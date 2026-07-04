@@ -1,0 +1,33 @@
+# Keep the production image clean and free of dev/VCS material.
+
+# Version control & this build's own files
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# Local DDEV development environment (dev-only; never deployed)
+.ddev/
+
+# Local env / secrets — production uses runtime env vars, not files
+.env
+.env.*
+
+# Telemetry log — do NOT bake collected proofs into the image; save.php
+# recreates record.json on first write (and HTTP reads of it are denied).
+record.json
+
+# Stray, unrelated Python-2 toy (not part of the web app)
+sier.py
+
+# Docs
+*.md
+README*
+
+# OS / editor junk (AppleDouble resource forks, Finder metadata, swap files)
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+*.swp
+*.swo
