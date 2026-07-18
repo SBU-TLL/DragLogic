@@ -27,4 +27,5 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     exit;
 }
 
-file_put_contents(__DIR__ . '/record.json', $data . "\n", FILE_APPEND | LOCK_EX);
+// record.json lives next to www/, outside the web root.
+file_put_contents(dirname(__DIR__) . '/record.json', $data . "\n", FILE_APPEND | LOCK_EX);

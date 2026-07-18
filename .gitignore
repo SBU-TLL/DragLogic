@@ -1,0 +1,8 @@
+# Runtime telemetry (save.php appends; not tracked)
+record.json
+
+# Env/junk
+.env*
+.DS_Store
+._*
+*.log

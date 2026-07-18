@@ -1,6 +1,6 @@
 name: draglogic
 type: php
-docroot: ""
+docroot: "www"
 php_version: "8.3"
 webserver_type: nginx-fpm
 xdebug_enabled: false
